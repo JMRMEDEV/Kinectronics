@@ -1,0 +1,433 @@
+﻿<Window x:Class="Kinectronics.DataWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kinectronics"
+        mc:Ignorable="d"
+        Title="DataWindow" Height="620" Width="800">
+    <Grid Name="DataWindowGrid" Background="Black">
+        <Grid Name="MainDataGrid" Margin="0,12,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Name="MainRow"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Name="data"/>
+                <ColumnDefinition Name="skeleton"/>
+            </Grid.ColumnDefinitions>
+            <Grid Name="SubdataGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition Name="Row1"/>
+                    <RowDefinition Name="Row2"/>
+                    <RowDefinition Name="Row3"/>
+                    <RowDefinition Name="Row4"/>
+                    <RowDefinition Name="Row5"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Name="UniqueCol"/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Row="0" BorderBrush="DodgerBlue" BorderThickness="5"/>
+                <Border Grid.Row="1" BorderBrush="DodgerBlue" BorderThickness="5"/>
+                <Border Grid.Row="2" BorderBrush="DodgerBlue" BorderThickness="5"/>
+                <Border Grid.Row="3" BorderBrush="DodgerBlue" BorderThickness="5"/>
+                <Border Grid.Row="4" BorderBrush="DodgerBlue" BorderThickness="5"/>
+                <StackPanel Grid.Row="0">
+                    <Grid Height="110">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Name="SubRow1_1"/>
+                            <RowDefinition Name="SubRow1_2"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Name="SubCol1_1"/>
+                            <ColumnDefinition Name="SubCol1_2"/>
+                            <ColumnDefinition Name="SubCol1_3"/>
+                        </Grid.ColumnDefinitions>
+                        <ComboBox Name="Joint1" Grid.Row="0" Grid.ColumnSpan="3" Height="30" Width="350" Background="DodgerBlue" Foreground="Black" BorderBrush="White" BorderThickness="2"
+                                  Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" DropDownOpened="Joint1_DropDownOpened" >
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Head_CB_Item" Selected="Head_CB_Item_Selected">Head</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Neck_CB_Item" Selected="Neck_CB_Item_Selected">Neck</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Spine_S_CB_Item" Selected="Spine_S_CB_Item_Selected">Spine_Shoulder</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Shoulder_R_CB_Item" Selected="Shoulder_R_CB_Item_Selected">Shoulder_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Shoulder_L_CB_Item" Selected="Shoulder_L_CB_Item_Selected">Shoulder_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Spine_M_CB_Item" Selected="Spine_M_CB_Item_Selected">Spine_Mid</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Elbow_R_CB_Item" Selected="Elbow_R_CB_Item_Selected">Elbow_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Elbow_L_CB_Item" Selected="Elbow_L_CB_Item_Selected">Elbow_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Spine_B_CB_Item" Selected="Spine_B_CB_Item_Selected">Spine_Base</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Hip_R_CB_Item" Selected="Hip_R_CB_Item_Selected">Hip_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Hip_L_CB_Item" Selected="Hip_L_CB_Item_Selected">Hip_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Wrist_R_CB_Item" Selected="Wrist_R_CB_Item_Selected">Wrist_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Wrist_L_CB_Item" Selected="Wrist_L_CB_Item_Selected">Wrist_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Thumb_R_CB_Item" Selected="Thumb_R_CB_Item_Selected">Thumb_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Thumb_L_CB_Item" Selected="Thumb_L_CB_Item_Selected">Thumb_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Hand_R_CB_Item" Selected="Hand_R_CB_Item_Selected">Hand_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Hand_L_CB_Item" Selected="Hand_L_CB_Item_Selected">Hand_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Hand_TR_CB_Item" Selected="Hand_TR_CB_Item_Selected">Hand_Tip_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Hand_TL_CB_Item" Selected="Hand_TL_CB_Item_Selected">Hand_Tip_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Knee_R_CB_Item" Selected="Knee_R_CB_Item_Selected">Knee_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Knee_L_CB_Item" Selected="Knee_L_CB_Item_Selected">Knee_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Ankle_R_CB_Item" Selected="Ankle_R_CB_Item_Selected">Ankle_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Ankle_L_CB_Item" Selected="Ankle_L_CB_Item_Selected">Ankle_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Foot_R_CB_Item" Selected="Foot_R_CB_Item_Selected">Foot_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J1_Foot_L_CB_Item" Selected="Foot_L_CB_Item_Selected">Foot_Left</ComboBoxItem>
+                        </ComboBox>
+                        <Grid Grid.Row="1" Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Name="SubCol1_1_1" Width="30"/>
+                                <ColumnDefinition Name="SubCol1_1_2" Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" FontSize="25" Foreground="DodgerBlue" Height="30" Width="20" VerticalAlignment="Center">X:</TextBlock>
+                            <TextBlock Grid.Column="1" FontSize="22" Foreground="LimeGreen" Height="30" VerticalAlignment="Center" Name="J1_X_Cor"></TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Name="SubCol1_2_1" Width="30"/>
+                                <ColumnDefinition Name="SubCol1_2_2" Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" FontSize="25" Foreground="DodgerBlue" Height="30" Width="20" VerticalAlignment="Center">Y:</TextBlock>
+                            <TextBlock Grid.Column="1" FontSize="22" Foreground="LimeGreen" Height="30" VerticalAlignment="Center" Name="J1_Y_Cor"></TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Name="SubCol1_3_1" Width="30"/>
+                                <ColumnDefinition Name="SubCol1_3_2" Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" FontSize="25" Foreground="DodgerBlue" Height="30" Width="20" VerticalAlignment="Center">Z:</TextBlock>
+                            <TextBlock Grid.Column="1" FontSize="22" Foreground="LimeGreen" Height="30" VerticalAlignment="Center" Name="J1_Z_Cor"></TextBlock>
+                        </Grid>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Grid.Row="1">
+                    <Grid Height="110">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Name="SubRow2_1"/>
+                            <RowDefinition Name="SubRow2_2"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Name="SubCol2_1"/>
+                            <ColumnDefinition Name="SubCol2_2"/>
+                            <ColumnDefinition Name="SubCol2_3"/>
+                        </Grid.ColumnDefinitions>
+                        <ComboBox Name="Joint2" Grid.Row="0" Grid.ColumnSpan="3" Height="30" Width="350" Background="DodgerBlue" Foreground="Black" BorderBrush="White" BorderThickness="2"
+                                  Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" DropDownOpened="Joint2_DropDownOpened">
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Head_CB_Item" Selected="Head_CB_Item_Selected">Head</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Neck_CB_Item" Selected="Neck_CB_Item_Selected">Neck</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Spine_S_CB_Item" Selected="Spine_S_CB_Item_Selected">Spine_Shoulder</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Shoulder_R_CB_Item" Selected="Shoulder_R_CB_Item_Selected">Shoulder_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Shoulder_L_CB_Item" Selected="Shoulder_L_CB_Item_Selected">Shoulder_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Spine_M_CB_Item" Selected="Spine_M_CB_Item_Selected">Spine_Mid</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Elbow_R_CB_Item" Selected="Elbow_R_CB_Item_Selected">Elbow_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Elbow_L_CB_Item" Selected="Elbow_L_CB_Item_Selected">Elbow_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Spine_B_CB_Item" Selected="Spine_B_CB_Item_Selected">Spine_Base</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Hip_R_CB_Item" Selected="Hip_R_CB_Item_Selected">Hip_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Hip_L_CB_Item" Selected="Hip_L_CB_Item_Selected">Hip_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Wrist_R_CB_Item" Selected="Wrist_R_CB_Item_Selected">Wrist_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Wrist_L_CB_Item" Selected="Wrist_L_CB_Item_Selected">Wrist_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Thumb_R_CB_Item" Selected="Thumb_R_CB_Item_Selected">Thumb_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Thumb_L_CB_Item" Selected="Thumb_L_CB_Item_Selected">Thumb_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Hand_R_CB_Item" Selected="Hand_R_CB_Item_Selected">Hand_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Hand_L_CB_Item" Selected="Hand_L_CB_Item_Selected">Hand_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Hand_TR_CB_Item" Selected="Hand_TR_CB_Item_Selected">Hand_Tip_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Hand_TL_CB_Item" Selected="Hand_TL_CB_Item_Selected">Hand_Tip_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Knee_R_CB_Item" Selected="Knee_R_CB_Item_Selected">Knee_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Knee_L_CB_Item" Selected="Knee_L_CB_Item_Selected">Knee_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Ankle_R_CB_Item" Selected="Ankle_R_CB_Item_Selected">Ankle_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Ankle_L_CB_Item" Selected="Ankle_L_CB_Item_Selected">Ankle_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Foot_R_CB_Item" Selected="Foot_R_CB_Item_Selected">Foot_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J2_Foot_L_CB_Item" Selected="Foot_L_CB_Item_Selected">Foot_Left</ComboBoxItem>
+                        </ComboBox>
+                        <Grid Grid.Row="1" Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Name="SubCol2_1_1" Width="30"/>
+                                <ColumnDefinition Name="SubCol2_1_2" Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" FontSize="25" Foreground="DodgerBlue" Height="30" Width="20" VerticalAlignment="Center">X:</TextBlock>
+                            <TextBlock Grid.Column="1" FontSize="22" Foreground="LimeGreen" Height="30" VerticalAlignment="Center" Name="J2_X_Cor"></TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Name="SubCol2_2_1" Width="30"/>
+                                <ColumnDefinition Name="SubCol2_2_2" Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" FontSize="25" Foreground="DodgerBlue" Height="30" Width="20" VerticalAlignment="Center">Y:</TextBlock>
+                            <TextBlock Grid.Column="1" FontSize="22" Foreground="LimeGreen" Height="30" VerticalAlignment="Center" Name="J2_Y_Cor"></TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Name="SubCol2_3_1" Width="30"/>
+                                <ColumnDefinition Name="SubCol2_3_2" Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" FontSize="25" Foreground="DodgerBlue" Height="30" Width="20" VerticalAlignment="Center">Z:</TextBlock>
+                            <TextBlock Grid.Column="1" FontSize="22" Foreground="LimeGreen" Height="30" VerticalAlignment="Center" Name="J2_Z_Cor"></TextBlock>
+                        </Grid>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Grid.Row="2">
+                    <Grid Height="110">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Name="SubRow3_1"/>
+                            <RowDefinition Name="SubRow3_2"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Name="SubCol3_1"/>
+                            <ColumnDefinition Name="SubCol3_2"/>
+                            <ColumnDefinition Name="SubCol3_3"/>
+                        </Grid.ColumnDefinitions>
+                        <ComboBox Name="Joint3" Grid.Row="0" Grid.ColumnSpan="3" Height="30" Width="350" Background="DodgerBlue" Foreground="Black" BorderBrush="White" BorderThickness="2"
+                                  Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" DropDownOpened="Joint3_DropDownOpened">
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Head_CB_Item" Selected="Head_CB_Item_Selected">Head</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Neck_CB_Item" Selected="Neck_CB_Item_Selected">Neck</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Spine_S_CB_Item" Selected="Spine_S_CB_Item_Selected">Spine_Shoulder</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Shoulder_R_CB_Item" Selected="Shoulder_R_CB_Item_Selected">Shoulder_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Shoulder_L_CB_Item" Selected="Shoulder_L_CB_Item_Selected">Shoulder_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Spine_M_CB_Item" Selected="Spine_M_CB_Item_Selected">Spine_Mid</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Elbow_R_CB_Item" Selected="Elbow_R_CB_Item_Selected">Elbow_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Elbow_L_CB_Item" Selected="Elbow_L_CB_Item_Selected">Elbow_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Spine_B_CB_Item" Selected="Spine_B_CB_Item_Selected">Spine_Base</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Hip_R_CB_Item" Selected="Hip_R_CB_Item_Selected">Hip_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Hip_L_CB_Item" Selected="Hip_L_CB_Item_Selected">Hip_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Wrist_R_CB_Item" Selected="Wrist_R_CB_Item_Selected">Wrist_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Wrist_L_CB_Item" Selected="Wrist_L_CB_Item_Selected">Wrist_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Thumb_R_CB_Item" Selected="Thumb_R_CB_Item_Selected">Thumb_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Thumb_L_CB_Item" Selected="Thumb_L_CB_Item_Selected">Thumb_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Hand_R_CB_Item" Selected="Hand_R_CB_Item_Selected">Hand_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Hand_L_CB_Item" Selected="Hand_L_CB_Item_Selected">Hand_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Hand_TR_CB_Item" Selected="Hand_TR_CB_Item_Selected">Hand_Tip_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Hand_TL_CB_Item" Selected="Hand_TL_CB_Item_Selected">Hand_Tip_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Knee_R_CB_Item" Selected="Knee_R_CB_Item_Selected">Knee_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Knee_L_CB_Item" Selected="Knee_L_CB_Item_Selected">Knee_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Ankle_R_CB_Item" Selected="Ankle_R_CB_Item_Selected">Ankle_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Ankle_L_CB_Item" Selected="Ankle_L_CB_Item_Selected">Ankle_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Foot_R_CB_Item" Selected="Foot_R_CB_Item_Selected">Foot_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J3_Foot_L_CB_Item" Selected="Foot_L_CB_Item_Selected">Foot_Left</ComboBoxItem>
+                        </ComboBox>
+                        <Grid Grid.Row="1" Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Name="SubCol3_1_1" Width="30"/>
+                                <ColumnDefinition Name="SubCol3_1_2" Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" FontSize="25" Foreground="DodgerBlue" Height="30" Width="20" VerticalAlignment="Center">X:</TextBlock>
+                            <TextBlock Grid.Column="1" FontSize="22" Foreground="LimeGreen" Height="30" VerticalAlignment="Center" Name="J3_X_Cor"></TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Name="SubCol3_2_1" Width="30"/>
+                                <ColumnDefinition Name="SubCol3_2_2" Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" FontSize="25" Foreground="DodgerBlue" Height="30" Width="20" VerticalAlignment="Center">Y:</TextBlock>
+                            <TextBlock Grid.Column="1" FontSize="22" Foreground="LimeGreen" Height="30" VerticalAlignment="Center" Name="J3_Y_Cor"></TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Name="SubCol3_3_1" Width="30"/>
+                                <ColumnDefinition Name="SubCol3_3_2" Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" FontSize="25" Foreground="DodgerBlue" Height="30" Width="20" VerticalAlignment="Center">Z:</TextBlock>
+                            <TextBlock Grid.Column="1" FontSize="22" Foreground="LimeGreen" Height="30" VerticalAlignment="Center" Name="J3_Z_Cor"></TextBlock>
+                        </Grid>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Grid.Row="3">
+                    <Grid Height="110">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Name="SubRow4_1"/>
+                            <RowDefinition Name="SubRow4_2"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Name="SubCol4_1"/>
+                            <ColumnDefinition Name="SubCol4_2"/>
+                            <ColumnDefinition Name="SubCol4_3"/>
+                        </Grid.ColumnDefinitions>
+                        <ComboBox Name="Joint4" Grid.Row="0" Grid.ColumnSpan="3" Height="30" Width="350" Background="DodgerBlue" Foreground="Black" BorderBrush="White" BorderThickness="2"
+                                  Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" DropDownOpened="Joint4_DropDownOpened">
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Head_CB_Item" Selected="Head_CB_Item_Selected">Head</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Neck_CB_Item" Selected="Neck_CB_Item_Selected">Neck</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Spine_S_CB_Item" Selected="Spine_S_CB_Item_Selected">Spine_Shoulder</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Shoulder_R_CB_Item" Selected="Shoulder_R_CB_Item_Selected">Shoulder_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Shoulder_L_CB_Item" Selected="Shoulder_L_CB_Item_Selected">Shoulder_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Spine_M_CB_Item" Selected="Spine_M_CB_Item_Selected">Spine_Mid</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Elbow_R_CB_Item" Selected="Elbow_R_CB_Item_Selected">Elbow_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Elbow_L_CB_Item" Selected="Elbow_L_CB_Item_Selected">Elbow_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Spine_B_CB_Item" Selected="Spine_B_CB_Item_Selected">Spine_Base</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Hip_R_CB_Item" Selected="Hip_R_CB_Item_Selected">Hip_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Hip_L_CB_Item" Selected="Hip_L_CB_Item_Selected">Hip_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Wrist_R_CB_Item" Selected="Wrist_R_CB_Item_Selected">Wrist_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Wrist_L_CB_Item" Selected="Wrist_L_CB_Item_Selected">Wrist_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Thumb_R_CB_Item" Selected="Thumb_R_CB_Item_Selected">Thumb_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Thumb_L_CB_Item" Selected="Thumb_L_CB_Item_Selected">Thumb_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Hand_R_CB_Item" Selected="Hand_R_CB_Item_Selected">Hand_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Hand_L_CB_Item" Selected="Hand_L_CB_Item_Selected">Hand_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Hand_TR_CB_Item" Selected="Hand_TR_CB_Item_Selected">Hand_Tip_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Hand_TL_CB_Item" Selected="Hand_TL_CB_Item_Selected">Hand_Tip_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Knee_R_CB_Item" Selected="Knee_R_CB_Item_Selected">Knee_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Knee_L_CB_Item" Selected="Knee_L_CB_Item_Selected">Knee_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Ankle_R_CB_Item" Selected="Ankle_R_CB_Item_Selected">Ankle_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Ankle_L_CB_Item" Selected="Ankle_L_CB_Item_Selected">Ankle_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Foot_R_CB_Item" Selected="Foot_R_CB_Item_Selected">Foot_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J4_Foot_L_CB_Item" Selected="Foot_L_CB_Item_Selected">Foot_Left</ComboBoxItem>
+                        </ComboBox>
+                        <Grid Grid.Row="1" Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Name="SubCol4_1_1" Width="30"/>
+                                <ColumnDefinition Name="SubCol4_1_2" Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" FontSize="25" Foreground="DodgerBlue" Height="30" Width="20" VerticalAlignment="Center">X:</TextBlock>
+                            <TextBlock Grid.Column="1" FontSize="22" Foreground="LimeGreen" Height="30" VerticalAlignment="Center" Name="J4_X_Cor"></TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Name="SubCol1_4_1" Width="30"/>
+                                <ColumnDefinition Name="SubCol4_2_2" Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" FontSize="25" Foreground="DodgerBlue" Height="30" Width="20" VerticalAlignment="Center">Y:</TextBlock>
+                            <TextBlock Grid.Column="1" FontSize="22" Foreground="LimeGreen" Height="30" VerticalAlignment="Center" Name="J4_Y_Cor"></TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Name="SubCol4_3_1" Width="30"/>
+                                <ColumnDefinition Name="SubCol4_3_2" Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" FontSize="25" Foreground="DodgerBlue" Height="30" Width="20" VerticalAlignment="Center">Z:</TextBlock>
+                            <TextBlock Grid.Column="1" FontSize="22" Foreground="LimeGreen" Height="30" VerticalAlignment="Center" Name="J4_Z_Cor"></TextBlock>
+                        </Grid>
+                    </Grid>
+                </StackPanel>
+                <StackPanel Grid.Row="4">
+                    <Grid Height="110">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Name="SubRow5_1"/>
+                            <RowDefinition Name="SubRow5_2"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Name="SubCol5_1"/>
+                            <ColumnDefinition Name="SubCol5_2"/>
+                            <ColumnDefinition Name="SubCol5_3"/>
+                        </Grid.ColumnDefinitions>
+                        <ComboBox Name="Joint5" Grid.Row="0" Grid.ColumnSpan="3" Height="30" Width="350" Background="DodgerBlue" Foreground="Black" BorderBrush="White" BorderThickness="2"
+                                  Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" DropDownOpened="Joint5_DropDownOpened">
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Head_CB_Item" Selected="Head_CB_Item_Selected">Head</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Neck_CB_Item" Selected="Neck_CB_Item_Selected">Neck</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Spine_S_CB_Item" Selected="Spine_S_CB_Item_Selected">Spine_Shoulder</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Shoulder_R_CB_Item" Selected="Shoulder_R_CB_Item_Selected">Shoulder_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Shoulder_L_CB_Item" Selected="Shoulder_L_CB_Item_Selected">Shoulder_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Spine_M_CB_Item" Selected="Spine_M_CB_Item_Selected">Spine_Mid</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Elbow_R_CB_Item" Selected="Elbow_R_CB_Item_Selected">Elbow_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Elbow_L_CB_Item" Selected="Elbow_L_CB_Item_Selected">Elbow_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Spine_B_CB_Item" Selected="Spine_B_CB_Item_Selected">Spine_Base</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Hip_R_CB_Item" Selected="Hip_R_CB_Item_Selected">Hip_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Hip_L_CB_Item" Selected="Hip_L_CB_Item_Selected">Hip_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Wrist_R_CB_Item" Selected="Wrist_R_CB_Item_Selected">Wrist_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Wrist_L_CB_Item" Selected="Wrist_L_CB_Item_Selected">Wrist_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Thumb_R_CB_Item" Selected="Thumb_R_CB_Item_Selected">Thumb_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Thumb_L_CB_Item" Selected="Thumb_L_CB_Item_Selected">Thumb_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Hand_R_CB_Item" Selected="Hand_R_CB_Item_Selected">Hand_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Hand_L_CB_Item" Selected="Hand_L_CB_Item_Selected">Hand_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Hand_TR_CB_Item" Selected="Hand_TR_CB_Item_Selected">Hand_Tip_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Hand_TL_CB_Item" Selected="Hand_TL_CB_Item_Selected">Hand_Tip_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Knee_R_CB_Item" Selected="Knee_R_CB_Item_Selected">Knee_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Knee_L_CB_Item" Selected="Knee_L_CB_Item_Selected">Knee_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Ankle_R_CB_Item" Selected="Ankle_R_CB_Item_Selected">Ankle_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Ankle_L_CB_Item" Selected="Ankle_L_CB_Item_Selected">Ankle_Left</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Foot_R_CB_Item" Selected="Foot_R_CB_Item_Selected">Foot_Right</ComboBoxItem>
+                            <ComboBoxItem Background="LimeGreen" Name="J5_Foot_L_CB_Item" Selected="Foot_L_CB_Item_Selected">Foot_Left</ComboBoxItem>
+                        </ComboBox>
+                        <Grid Grid.Row="1" Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Name="SubCol5_1_1" Width="30"/>
+                                <ColumnDefinition Name="SubCol5_1_2" Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" FontSize="25" Foreground="DodgerBlue" Height="30" Width="20" VerticalAlignment="Center">X:</TextBlock>
+                            <TextBlock Grid.Column="1" FontSize="22" Foreground="LimeGreen" Height="30" VerticalAlignment="Center" Name="J5_X_Cor"></TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Name="SubCol5_2_1" Width="30"/>
+                                <ColumnDefinition Name="SubCol5_2_2" Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" FontSize="25" Foreground="DodgerBlue" Height="30" Width="20" VerticalAlignment="Center">Y:</TextBlock>
+                            <TextBlock Grid.Column="1" FontSize="22" Foreground="LimeGreen" Height="30" VerticalAlignment="Center" Name="J5_Y_Cor"></TextBlock>
+                        </Grid>
+                        <Grid Grid.Row="1" Grid.Column="2">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Name="SubCol5_3_1" Width="30"/>
+                                <ColumnDefinition Name="SubCol5_3_2" Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" FontSize="25" Foreground="DodgerBlue" Height="30" Width="20" VerticalAlignment="Center">Z:</TextBlock>
+                            <TextBlock Grid.Column="1" FontSize="22" Foreground="LimeGreen" Height="30" VerticalAlignment="Center" Name="J5_Z_Cor"></TextBlock>
+                        </Grid>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+            <Image Grid.Column="1" Grid.Row="0" Name="Skeleton" HorizontalAlignment="Center" Source="Images/skeleton.png"/>
+        </Grid>
+        <Ellipse Name="HeadActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="30" Margin="570,54,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="NeckActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="30" Margin="570,100,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Spine_SActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="30" Margin="568,141,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Spine_MActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="30" Margin="570,210,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Spine_BActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="30" Margin="570,280,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Hip_LActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="30" Margin="535,298,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Shoulder_LActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="30" Margin="507,154,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Shoulder_RActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="30" Margin="632,150,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Elbow_LActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="30" Margin="460,248,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Wrist_LActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="30" Margin="460,340,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Hand_LActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="23" Margin="466,375,0,0" Stroke="Black" VerticalAlignment="Top" Width="22" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Thumb_LActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="23" Margin="433,366,0,0" Stroke="Black" VerticalAlignment="Top" Width="22" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Hand_TLActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="23" Margin="448,401,0,0" Stroke="Black" VerticalAlignment="Top" Width="22" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Knee_LActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="30" Margin="523,385,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Hip_RActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="30" Margin="612,296,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Knee_RActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="30" Margin="626,377,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Ankle_LActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="30" Margin="507,474,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Foot_LActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="30" Margin="470,510,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Ankle_RActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="30" Margin="644,474,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Foot_RActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="30" Margin="680,510,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Elbow_RActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="30" Margin="676,248,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Wrist_RActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="30" Margin="680,330,0,0" Stroke="Black" VerticalAlignment="Top" Width="30" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Hand_RActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="23" Margin="686,367,0,0" Stroke="Black" VerticalAlignment="Top" Width="22" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Hand_TRActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="23" Margin="698,389,0,0" Stroke="Black" VerticalAlignment="Top" Width="22" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+        <Ellipse Name="Thumb_RActiveJoint" Fill="Red" HorizontalAlignment="Left" Height="23" Margin="726,357,0,0" Stroke="Black" VerticalAlignment="Top" Width="22" RenderTransformOrigin="2.483,0.362" Visibility="Hidden"/>
+    </Grid>
+</Window>
