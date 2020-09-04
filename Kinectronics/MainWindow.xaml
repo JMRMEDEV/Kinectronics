@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kinectronics"
         mc:Ignorable="d"
-        Title="Kinectronics" Height="900" Width="1600" WindowState="Maximized" WindowStyle="ThreeDBorderWindow">
+        Title="Kinectronics" Height="900" Width="1600" WindowState="Maximized" WindowStyle="ThreeDBorderWindow" Closing="MainWindow_Closing">
     <Grid Name="MainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Name="RowUniqueForAllContent" Width="71*"/>
