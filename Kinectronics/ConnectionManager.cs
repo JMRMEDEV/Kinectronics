@@ -7,7 +7,6 @@ namespace Kinectronics
     public class ConnectionManager
     {
         private KinectSensor kinectSensor = null; //Create and initializes a KinectSensor object, used for setting the sensor active
-        private string statusText = null;
         private TextBlock _statusMessage = null;
 
         public ConnectionManager(TextBlock statusMessage)
