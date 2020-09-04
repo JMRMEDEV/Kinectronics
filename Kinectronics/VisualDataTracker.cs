@@ -1,165 +1,159 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Kinectronics
+﻿namespace Kinectronics
 {
     public class VisualDataTracker
     {
-        public struct SelectedJoints
+        public class SelectedJoints
         {
-            public struct Head
+            public class Head
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct Neck
+            public class Neck
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct SpineShoulder
+            public class SpineShoulder
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct ShoulderRight
+            public class ShoulderRight
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct ShoulderLeft
+            public class ShoulderLeft
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct SpineMid
+            public class SpineMid
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct ElbowRight
+            public class ElbowRight
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct ElbowLeft
+            public class ElbowLeft
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct SpineBase
+            public class SpineBase
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct HipRight
+            public class HipRight
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct HipLeft
+            public class HipLeft
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct WristRight
+            public class WristRight
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct WristLeft
+            public class WristLeft
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct ThumbRight
+            public class ThumbRight
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct ThumbLeft
+            public class ThumbLeft
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct HandRight
+            public class HandRight
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct HandLeft
+            public class HandLeft
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct HandTipRight
+            public class HandTipRight
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct HandTipLeft
+            public class HandTipLeft
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct KneeRight
+            public class KneeRight
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct KneeLeft
+            public class KneeLeft
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct AnkleRight
+            public class AnkleRight
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct AnkleLeft
+            public class AnkleLeft
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct FootRight
+            public class FootRight
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public struct FootLeft
+            public class FootLeft
             {
                 public int joint_number;
                 public bool tracked;
             }
-            public Head head;
-            public Neck neck;
-            public SpineShoulder spineShoulder;
-            public ShoulderRight shoulderRight;
-            public ShoulderLeft shoulderLeft;
-            public SpineMid spineMid;
-            public ElbowRight elbowRight;
-            public ElbowLeft elbowLeft;
-            public WristRight wristRight;
-            public WristLeft wristLeft;
-            public SpineBase spineBase;
-            public HipRight hipRight;
-            public HipLeft hipLeft;
-            public HandRight handRight;
-            public HandLeft handLeft;
-            public HandTipRight handTipRight;
-            public HandTipLeft handTipLeft;
-            public ThumbRight thumbRight;
-            public ThumbLeft thumbLeft;
-            public KneeRight kneeRight;
-            public KneeLeft kneeLeft;
-            public AnkleRight ankleRight;
-            public AnkleLeft ankleLeft;
-            public FootRight footRight;
-            public FootLeft footLeft;
+            public Head head = new Head();
+            public Neck neck = new Neck();
+            public SpineShoulder spineShoulder = new SpineShoulder();
+            public ShoulderRight shoulderRight = new ShoulderRight();
+            public ShoulderLeft shoulderLeft = new ShoulderLeft();
+            public SpineMid spineMid = new SpineMid();
+            public ElbowRight elbowRight = new ElbowRight();
+            public ElbowLeft elbowLeft = new ElbowLeft();
+            public WristRight wristRight = new WristRight();
+            public WristLeft wristLeft = new WristLeft();
+            public SpineBase spineBase = new SpineBase();
+            public HipRight hipRight = new HipRight();
+            public HipLeft hipLeft = new HipLeft();
+            public HandRight handRight = new HandRight();
+            public HandLeft handLeft = new HandLeft();
+            public HandTipRight handTipRight = new HandTipRight();
+            public HandTipLeft handTipLeft = new HandTipLeft();
+            public ThumbRight thumbRight = new ThumbRight();
+            public ThumbLeft thumbLeft = new ThumbLeft();
+            public KneeRight kneeRight = new KneeRight();
+            public KneeLeft kneeLeft = new KneeLeft();
+            public AnkleRight ankleRight = new AnkleRight();
+            public AnkleLeft ankleLeft = new AnkleLeft();
+            public FootRight footRight = new FootRight();
+            public FootLeft footLeft = new FootLeft();
         }
     }
 }

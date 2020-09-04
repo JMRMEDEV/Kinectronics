@@ -4,181 +4,181 @@ namespace Kinectronics
 {
     public class FloatBody
     {
-        public struct Head
+        public class Head
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct Neck
+        public class Neck
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct SpineShoulder
+        public class SpineShoulder
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct ShoulderRight
+        public class ShoulderRight
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct ShoulderLeft
+        public class ShoulderLeft
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct SpineMid
+        public class SpineMid
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct ElbowRight
+        public class ElbowRight
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct ElbowLeft
+        public class ElbowLeft
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct SpineBase
+        public class SpineBase
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct HipRight
+        public class HipRight
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct HipLeft
+        public class HipLeft
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct WristRight
+        public class WristRight
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct WristLeft
+        public class WristLeft
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct ThumbRight
+        public class ThumbRight
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct ThumbLeft
+        public class ThumbLeft
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct HandRight
+        public class HandRight
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct HandLeft
+        public class HandLeft
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct HandTipRight
+        public class HandTipRight
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct HandTipLeft
+        public class HandTipLeft
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct KneeRight
+        public class KneeRight
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct KneeLeft
+        public class KneeLeft
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct AnkleRight
+        public class AnkleRight
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct AnkleLeft
+        public class AnkleLeft
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct FootRight
+        public class FootRight
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
-        public struct FootLeft
+        public class FootLeft
         {
             public float coo_x;
             public float coo_y;
             public float coo_z;
         }
 
-        public Head head;
-        public Neck neck;
-        public SpineShoulder spineShoulder;
-        public ShoulderRight shoulderRight;
-        public ShoulderLeft shoulderLeft;
-        public SpineMid spineMid;
-        public ElbowRight elbowRight;
-        public ElbowLeft elbowLeft;
-        public WristRight wristRight;
-        public WristLeft wristLeft;
-        public SpineBase spineBase;
-        public HipRight hipRight;
-        public HipLeft hipLeft;
-        public HandRight handRight;
-        public HandLeft handLeft;
-        public HandTipRight handTipRight;
-        public HandTipLeft handTipLeft;
-        public ThumbRight thumbRight;
-        public ThumbLeft thumbLeft;
-        public KneeRight kneeRight;
-        public KneeLeft kneeLeft;
-        public AnkleRight ankleRight;
-        public AnkleLeft ankleLeft;
-        public FootRight footRight;
-        public FootLeft footLeft;
+        public Head head = new Head();
+        public Neck neck = new Neck();
+        public SpineShoulder spineShoulder = new SpineShoulder();
+        public ShoulderRight shoulderRight = new ShoulderRight();
+        public ShoulderLeft shoulderLeft = new ShoulderLeft();
+        public SpineMid spineMid = new SpineMid();
+        public ElbowRight elbowRight = new ElbowRight();
+        public ElbowLeft elbowLeft = new ElbowLeft();
+        public WristRight wristRight = new WristRight();
+        public WristLeft wristLeft = new WristLeft();
+        public SpineBase spineBase = new SpineBase();
+        public HipRight hipRight = new HipRight();
+        public HipLeft hipLeft = new HipLeft();
+        public HandRight handRight = new HandRight();
+        public HandLeft handLeft = new HandLeft();
+        public HandTipRight handTipRight = new HandTipRight();
+        public HandTipLeft handTipLeft = new HandTipLeft();
+        public ThumbRight thumbRight = new ThumbRight();
+        public ThumbLeft thumbLeft = new ThumbLeft();
+        public KneeRight kneeRight = new KneeRight();
+        public KneeLeft kneeLeft = new KneeLeft();
+        public AnkleRight ankleRight = new AnkleRight();
+        public AnkleLeft ankleLeft = new AnkleLeft();
+        public FootRight footRight = new FootRight();
+        public FootLeft footLeft = new FootLeft();
     }
 }
