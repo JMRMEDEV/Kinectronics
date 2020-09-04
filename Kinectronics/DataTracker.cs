@@ -1,7 +1,6 @@
 ﻿namespace Kinectronics
 {
     using System;
-    using System.Runtime.CompilerServices;
     using Microsoft.Kinect;
     public sealed class DataTracker
     {
