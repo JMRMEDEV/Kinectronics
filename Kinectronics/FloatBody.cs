@@ -4,155 +4,181 @@ namespace Kinectronics
 {
     public class FloatBody
     {
-        private struct Head
+        public struct Head
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Neck
+        public struct Neck
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Spine_Shoulder
+        public struct SpineShoulder
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Shoulder_Right
+        public struct ShoulderRight
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Shoulder_Left
+        public struct ShoulderLeft
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Spine_Mid
+        public struct SpineMid
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Elbow_Right
+        public struct ElbowRight
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Elbow_Left
+        public struct ElbowLeft
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Spine_Base
+        public struct SpineBase
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Hip_Right
+        public struct HipRight
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Hip_Left
+        public struct HipLeft
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Wrist_Right
+        public struct WristRight
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Wrist_Left
+        public struct WristLeft
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Thumb_Right
+        public struct ThumbRight
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Thumb_Left
+        public struct ThumbLeft
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Hand_Right
+        public struct HandRight
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Hand_Left
+        public struct HandLeft
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Hand_Tip_Right
+        public struct HandTipRight
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Hand_Tip_Left
+        public struct HandTipLeft
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Knee_Right
+        public struct KneeRight
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Knee_Left
+        public struct KneeLeft
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Ankle_Right
+        public struct AnkleRight
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Ankle_Left
+        public struct AnkleLeft
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Foot_Right
+        public struct FootRight
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
-        private struct Foot_Left
+        public struct FootLeft
         {
-            private float coo_x;
-            private float coo_y;
-            private float coo_z;
+            public float coo_x;
+            public float coo_y;
+            public float coo_z;
         }
+
+        public Head head;
+        public Neck neck;
+        public SpineShoulder spineShoulder;
+        public ShoulderRight shoulderRight;
+        public ShoulderLeft shoulderLeft;
+        public SpineMid spineMid;
+        public ElbowRight elbowRight;
+        public ElbowLeft elbowLeft;
+        public WristRight wristRight;
+        public WristLeft wristLeft;
+        public SpineBase spineBase;
+        public HipRight hipRight;
+        public HipLeft hipLeft;
+        public HandRight handRight;
+        public HandLeft handLeft;
+        public HandTipRight handTipRight;
+        public HandTipLeft handTipLeft;
+        public ThumbRight thumbRight;
+        public ThumbLeft thumbLeft;
+        public KneeRight kneeRight;
+        public KneeLeft kneeLeft;
+        public AnkleRight ankleRight;
+        public AnkleLeft ankleLeft;
+        public FootRight footRight;
+        public FootLeft footLeft;
     }
 }
