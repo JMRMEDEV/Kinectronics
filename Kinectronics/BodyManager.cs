@@ -14,11 +14,14 @@ namespace Kinectronics
         private BodyFrameReader bodyFrameReader = null; //Create and initializes a BodyFrameReader object, used to get Body data from the sensor
         private DataTracker tracker = null;
         private DataWindow dataWindow_bm;
+        private TextBlock textBlock_bm;
+        public GestureDetector gestureDetector = null;
         public BodyViewer viewer = null;
 
-        public BodyManager(DataWindow dataWindow)
+        public BodyManager(DataWindow dataWindow, TextBlock textblock)
         {
             dataWindow_bm = dataWindow;
+            textBlock_bm = textblock;
         }
         
         public void OpenBodyReader(KinectSensor kinectSensor)
@@ -28,6 +31,7 @@ namespace Kinectronics
             this.bodyFrameReader.FrameArrived += this.Reader_BodyFrameArrived;
             this.viewer = new BodyViewer(this.kinect);
             this.tracker = new DataTracker(this.kinect, this.dataWindow_bm);
+            this.gestureDetector = new GestureDetector(this.kinect, this.textBlock_bm);
         }
 
         public void CloseBodyReader()
@@ -100,6 +104,7 @@ namespace Kinectronics
                 {
                     this.viewer.UpdateBodyFrame(selectedBody);
                     this.tracker.GetJointsCoordinates(selectedBody);
+                    this.gestureDetector.detectGesture(selectedBody);
                 }
             }
         }
