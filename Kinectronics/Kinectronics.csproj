@@ -56,7 +56,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="TextBlockBody.cs" />
+    <Compile Include="GestureDataBases\KTDef1.cs" />
+    <Compile Include="GestureDetector.cs" />
     <Compile Include="VisualDataTracker.cs" />
     <Page Include="DataWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
