@@ -104,7 +104,7 @@ namespace Kinectronics
                 {
                     this.viewer.UpdateBodyFrame(selectedBody);
                     this.tracker.GetJointsCoordinates(selectedBody);
-                    this.gestureDetector.detectGesture(selectedBody);
+                    this.gestureDetector.DetectGesture(selectedBody);
                 }
             }
         }
