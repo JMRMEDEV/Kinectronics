@@ -9,7 +9,7 @@
     {
 
         private TextBlock textblock_gd;
-        private KTDef1 gestureDB;
+        private KinectronicsDefaultGestureDataBase gestureDB;
 
         public GestureDetector(KinectSensor kinectSensor, TextBlock textblock)
         {
@@ -17,17 +17,17 @@
             {
                 throw new ArgumentNullException("kinectSensor");
             }
-            gestureDB = new KTDef1();
+            gestureDB = new KinectronicsDefaultGestureDataBase();
             textblock_gd = textblock;
         }
 
-        public void detectGesture(Body body)
+        public void DetectGesture(Body body)
         {
             if (body != null)
             {
                 if (body.IsTracked)
                 {
-                    this.textblock_gd.Text = gestureDB.getGesture(body);
+                    this.textblock_gd.Text = gestureDB.GetGesture(body);
                 }
             }
         }
