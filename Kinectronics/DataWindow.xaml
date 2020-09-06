@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kinectronics"
         mc:Ignorable="d"
-        Title="DataWindow" Height="620" Width="800">
+        Title="DataWindow" Height="620" Width="800" Closing="Window_Closing">
     <Grid Name="DataWindowGrid" Background="Black">
         <Grid Name="MainDataGrid" Margin="0,12,0,0">
             <Grid.RowDefinitions>
