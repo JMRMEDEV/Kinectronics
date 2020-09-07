@@ -1,11 +1,11 @@
-﻿// 1. Arms45DownPosition
+﻿// 1. Arms45DownPosition (working)
 // 2. Arms45UpPosition (working)
 // 3. ArmsFrontPosition_L (working)
 // 4. ArmsFrontPosition_R (working)
 // 5. ArmsHRectanglePosition_L (working)
 // 6. ArmsHRectanglePosition_R (working)
-// 7. ArmsRectanglePosition_L
-// 8. ArmsRectanglePosition_R
+// 7. ArmsRectanglePosition_L (working with some bugs)
+// 8. ArmsRectanglePosition_R (working with some bugs)
 // 9. ArmsSidePosition_L (working)
 // 10. ArmsSidePosition_R (working
 // 11. ArmsSquarePosition_L
@@ -17,6 +17,7 @@ namespace Kinectronics.GestureDataBases
 
     public class KinectronicsDefaultGestureDataBase
     {
+        private bool twoHandedGesture = false;
 
         public KinectronicsDefaultGestureDataBase()
         {
@@ -29,27 +30,27 @@ namespace Kinectronics.GestureDataBases
             {
                 if (body.IsTracked)
                 {
-                    if (ArmsHRectanglePosition_R(body))
+                    if (ArmsHRectanglePosition_R(body) && !twoHandedGesture)
                     {
                         gesture = "ArmsHRectanglePosition_R";
                     }
-                    if (ArmsHRectanglePosition_L(body))
+                    if (ArmsHRectanglePosition_L(body) && !twoHandedGesture)
                     {
                         gesture = "ArmsHRectanglePosition_L";
                     }
-                    if (ArmsSidePosition_L(body))
+                    if (ArmsSidePosition_L(body) && !twoHandedGesture)
                     {
                         gesture = "ArmsSidePosition_L";
                     }
-                    if (ArmsSidePosition_R(body))
+                    if (ArmsSidePosition_R(body) && !twoHandedGesture)
                     {
                         gesture = "ArmsSidePosition_R";
                     }
-                    if (ArmsFrontPosition_R(body))
+                    if (ArmsFrontPosition_R(body) && !twoHandedGesture)
                     {
                         gesture = "ArmsFrontPosition_R";
                     }
-                    if (ArmsFrontPosition_L(body))
+                    if (ArmsFrontPosition_L(body) && !twoHandedGesture)
                     {
                         gesture = "ArmsFrontPosition_L";
                     }
@@ -60,6 +61,14 @@ namespace Kinectronics.GestureDataBases
                     if (Arms45DownPosition(body))
                     {
                         gesture = "Arms45DownPosition";
+                    }
+                    if (ArmsRectanglePosition_L(body))
+                    {
+                        gesture = "ArmsRectanglePosition_L";
+                    }
+                    if (ArmsRectanglePosition_R(body))
+                    {
+                        gesture = "ArmsRectanglePosition_R";
                     }
                 }
             }
@@ -345,6 +354,32 @@ namespace Kinectronics.GestureDataBases
                         }
                     }
                 }
+            }
+
+            return detected;
+        }
+
+        private bool ArmsRectanglePosition_L(Body body)
+        {
+            bool detected = false;
+            twoHandedGesture = false;
+            if (ArmsHRectanglePosition_L(body) && ArmsSidePosition_R(body))
+            {
+                twoHandedGesture = true;
+                detected = true;
+            }
+
+            return detected;
+        }
+
+        private bool ArmsRectanglePosition_R(Body body)
+        {
+            bool detected = false;
+            twoHandedGesture = false;
+            if (ArmsHRectanglePosition_R(body) && ArmsSidePosition_L(body))
+            {
+                twoHandedGesture = true;
+                detected = true;
             }
 
             return detected;
