@@ -4,12 +4,12 @@
 // 4. ArmsFrontPosition_R (working)
 // 5. ArmsHRectanglePosition_L (working)
 // 6. ArmsHRectanglePosition_R (working)
-// 7. ArmsRectanglePosition_L (working with some bugs)
-// 8. ArmsRectanglePosition_R (working with some bugs)
+// 7. ArmsRectanglePosition_L (working) --Requires Closed Hand State
+// 8. ArmsRectanglePosition_R (working) --Requires Closed Hand State
 // 9. ArmsSidePosition_L (working)
 // 10. ArmsSidePosition_R (working
-// 11. ArmsSquarePosition_L (working with some bugs)
-// 12. ArmsSquarePosition_R (working with some bugs)
+// 11. ArmsSquarePosition_L (working) --Requires Closed Hand State
+// 12. ArmsSquarePosition_R (working) --Requires Closed Hand State
 
 namespace Kinectronics.GestureDataBases
 {
@@ -38,19 +38,19 @@ namespace Kinectronics.GestureDataBases
                     {
                         gesture = "Arms45UpPosition";
                     }
-                    if (ArmsFrontPosition_L(body) && !twoHandedGesture) // Gesture 3
+                    if (ArmsFrontPosition_L(body) && !twoHandedGesture && body.HandLeftState == HandState.Open) // Gesture 3
                     {
                         gesture = "ArmsFrontPosition_L";
                     }
-                    if (ArmsFrontPosition_R(body) && !twoHandedGesture) // Gesture 4
+                    if (ArmsFrontPosition_R(body) && !twoHandedGesture && body.HandRightState == HandState.Open) // Gesture 4
                     {
                         gesture = "ArmsFrontPosition_R";
                     }
-                    if (ArmsHRectanglePosition_L(body) && !twoHandedGesture) // Gesture 5
+                    if (ArmsHRectanglePosition_L(body) && !twoHandedGesture && body.HandLeftState == HandState.Open) // Gesture 5
                     {
                         gesture = "ArmsHRectanglePosition_L";
                     }
-                    if (ArmsHRectanglePosition_R(body) && !twoHandedGesture) // Gesture 6
+                    if (ArmsHRectanglePosition_R(body) && !twoHandedGesture && body.HandRightState == HandState.Open) // Gesture 6
                     {
                         gesture = "ArmsHRectanglePosition_R";
                     }
@@ -62,11 +62,11 @@ namespace Kinectronics.GestureDataBases
                     {
                         gesture = "ArmsRectanglePosition_R";
                     }
-                    if (ArmsSidePosition_L(body) && !twoHandedGesture) // Gesture 9
+                    if (ArmsSidePosition_L(body) && !twoHandedGesture && body.HandLeftState == HandState.Open) // Gesture 9
                     {
                         gesture = "ArmsSidePosition_L";
                     }
-                    if (ArmsSidePosition_R(body) && !twoHandedGesture) // Gesture 10
+                    if (ArmsSidePosition_R(body) && !twoHandedGesture && body.HandRightState == HandState.Open) // Gesture 10
                     {
                         gesture = "ArmsSidePosition_R";
                     }
