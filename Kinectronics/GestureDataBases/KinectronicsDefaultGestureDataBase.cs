@@ -70,6 +70,14 @@ namespace Kinectronics.GestureDataBases
                     {
                         gesture = "ArmsRectanglePosition_R";
                     }
+                    if (ArmsSquarePosition_L(body))
+                    {
+                        gesture = "ArmsSquarePosition_L";
+                    }
+                    if (ArmsSquarePosition_R(body))
+                    {
+                        gesture = "ArmsSquarePosition_R";
+                    }
                 }
             }
             return gesture;
@@ -377,6 +385,32 @@ namespace Kinectronics.GestureDataBases
             bool detected = false;
             twoHandedGesture = false;
             if (ArmsHRectanglePosition_R(body) && ArmsSidePosition_L(body))
+            {
+                twoHandedGesture = true;
+                detected = true;
+            }
+
+            return detected;
+        }
+
+        private bool ArmsSquarePosition_L(Body body)
+        {
+            bool detected = false;
+            twoHandedGesture = false;
+            if (ArmsFrontPosition_L(body) && ArmsSidePosition_R(body))
+            {
+                twoHandedGesture = true;
+                detected = true;
+            }
+
+            return detected;
+        }
+
+        private bool ArmsSquarePosition_R(Body body)
+        {
+            bool detected = false;
+            twoHandedGesture = false;
+            if (ArmsFrontPosition_R(body) && ArmsSidePosition_L(body))
             {
                 twoHandedGesture = true;
                 detected = true;
