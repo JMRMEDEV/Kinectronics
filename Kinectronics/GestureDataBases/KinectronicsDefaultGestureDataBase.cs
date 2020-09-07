@@ -1,5 +1,5 @@
 ﻿// 1. Arms45DownPosition
-// 2. Arms45UpPosition
+// 2. Arms45UpPosition (working)
 // 3. ArmsFrontPosition_L (working)
 // 4. ArmsFrontPosition_R (working)
 // 5. ArmsHRectanglePosition_L (working)
@@ -53,6 +53,10 @@ namespace Kinectronics.GestureDataBases
                     {
                         gesture = "ArmsFrontPosition_L";
                     }
+                    if (Arms45UpPosition(body))
+                    {
+                        gesture = "Arms45UpPosition";
+                    }
                 }
             }
             return gesture;
@@ -64,6 +68,7 @@ namespace Kinectronics.GestureDataBases
             bool detected = false;
             floatBody = new FloatBody();
             floatBody.head.coo_y = body.Joints[JointType.Head].Position.Y;
+            floatBody.shoulderRight.coo_x = body.Joints[JointType.ShoulderRight].Position.X;
             floatBody.shoulderRight.coo_y = body.Joints[JointType.ShoulderRight].Position.Y;
             floatBody.spineShoulder.coo_y = body.Joints[JointType.SpineShoulder].Position.Y;
             floatBody.spineShoulder.coo_z = body.Joints[JointType.SpineShoulder].Position.Z;
@@ -79,11 +84,14 @@ namespace Kinectronics.GestureDataBases
                 {
                     if (floatBody.shoulderRight.coo_y <= floatBody.spineShoulder.coo_y + 0.1 && floatBody.shoulderRight.coo_y >= floatBody.spineShoulder.coo_y - 0.1)
                     {
-                        if (floatBody.elbowRight.coo_y <= floatBody.shoulderRight.coo_y + 0.1 && floatBody.elbowRight.coo_y >= floatBody.shoulderRight.coo_y - 0.1)
+                        if (floatBody.wristRight.coo_x >= floatBody.shoulderRight.coo_x + 0.2)
                         {
-                            if (floatBody.wristRight.coo_x >= floatBody.elbowRight.coo_x - 0.1 && floatBody.wristRight.coo_x <= floatBody.elbowRight.coo_x + 0.1)
+                            if (floatBody.elbowRight.coo_y <= floatBody.shoulderRight.coo_y + 0.1 && floatBody.elbowRight.coo_y >= floatBody.shoulderRight.coo_y - 0.1)
                             {
-                                detected = true;
+                                if (floatBody.wristRight.coo_x >= floatBody.elbowRight.coo_x - 0.1 && floatBody.wristRight.coo_x <= floatBody.elbowRight.coo_x + 0.1)
+                                {
+                                    detected = true;
+                                }
                             }
                         }
                     }
@@ -114,11 +122,14 @@ namespace Kinectronics.GestureDataBases
                 {
                     if (floatBody.shoulderLeft.coo_y <= floatBody.spineShoulder.coo_y + 0.1 && floatBody.shoulderLeft.coo_y >= floatBody.spineShoulder.coo_y - 0.1)
                     {
-                        if (floatBody.elbowLeft.coo_y <= floatBody.shoulderLeft.coo_y + 0.1 && floatBody.elbowLeft.coo_y >= floatBody.shoulderLeft.coo_y - 0.1)
+                        if (floatBody.wristLeft.coo_x <= floatBody.shoulderRight.coo_x - 0.2)
                         {
-                            if (floatBody.wristLeft.coo_x <= floatBody.elbowLeft.coo_x + 0.1 && floatBody.wristLeft.coo_x >= floatBody.elbowLeft.coo_x - 0.1)
+                            if (floatBody.elbowLeft.coo_y <= floatBody.shoulderLeft.coo_y + 0.1 && floatBody.elbowLeft.coo_y >= floatBody.shoulderLeft.coo_y - 0.1)
                             {
-                                detected = true;
+                                if (floatBody.wristLeft.coo_x <= floatBody.elbowLeft.coo_x + 0.1 && floatBody.wristLeft.coo_x >= floatBody.elbowLeft.coo_x - 0.1)
+                                {
+                                    detected = true;
+                                }
                             }
                         }
                     }
@@ -205,9 +216,15 @@ namespace Kinectronics.GestureDataBases
             {
                 if(floatBody.wristRight.coo_y < floatBody.neck.coo_y)
                 {
-                    if (floatBody.wristRight.coo_x <= floatBody.shoulderRight.coo_x + 0.25 && floatBody.wristRight.coo_y <= floatBody.shoulderRight.coo_y && floatBody.wristRight.coo_y >= floatBody.shoulderRight.coo_y - 0.5)
+                    if (floatBody.wristRight.coo_x <= floatBody.shoulderRight.coo_x + 0.25 && floatBody.wristRight.coo_y <= floatBody.shoulderRight.coo_y)
                     {
-                        detected = true;
+                        if (floatBody.wristRight.coo_x > floatBody.elbowLeft.coo_x)
+                        {
+                            if (floatBody.wristRight.coo_y >= floatBody.shoulderRight.coo_y - 0.5)
+                            {
+                                detected = true;
+                            }
+                        }
                     }
                 }
             }
@@ -221,6 +238,7 @@ namespace Kinectronics.GestureDataBases
             bool detected = false;
             floatBody = new FloatBody();
             floatBody.neck.coo_y = body.Joints[JointType.Neck].Position.Y;
+            floatBody.elbowLeft.coo_x = body.Joints[JointType.ElbowLeft].Position.X;
             floatBody.shoulderLeft.coo_x = body.Joints[JointType.ShoulderLeft].Position.X;
             floatBody.shoulderLeft.coo_y = body.Joints[JointType.ShoulderLeft].Position.Y;
             floatBody.spineShoulder.coo_z = body.Joints[JointType.SpineShoulder].Position.Z;
@@ -232,13 +250,52 @@ namespace Kinectronics.GestureDataBases
             {
                 if (floatBody.wristLeft.coo_y < floatBody.neck.coo_y)
                 {
-                    if (floatBody.wristLeft.coo_x >= floatBody.shoulderLeft.coo_x - 0.25 && floatBody.wristLeft.coo_y <= floatBody.shoulderLeft.coo_y && floatBody.wristLeft.coo_y >= floatBody.shoulderLeft.coo_y - 0.5)
+                    if (floatBody.wristLeft.coo_x >= floatBody.shoulderLeft.coo_x - 0.25 && floatBody.wristLeft.coo_y <= floatBody.shoulderLeft.coo_y)
                     {
-                        detected = true;
+                        if(floatBody.wristLeft.coo_x < floatBody.elbowLeft.coo_x)
+                        {
+                            if (floatBody.wristLeft.coo_y >= floatBody.shoulderLeft.coo_y - 0.5)
+                            {
+                                detected = true;
+                            }
+                        }
                     }
                 }
             }
 
+            return detected;
+        }
+
+        private bool Arms45UpPosition(Body body)
+        {
+            FloatBody floatBody;
+            bool detected = false;
+            floatBody = new FloatBody();
+            floatBody.head.coo_y = body.Joints[JointType.Head].Position.Y;
+            floatBody.shoulderLeft.coo_x = body.Joints[JointType.ShoulderLeft].Position.X;
+            floatBody.shoulderRight.coo_x = body.Joints[JointType.ShoulderRight].Position.X;
+            floatBody.elbowRight.coo_z = body.Joints[JointType.ElbowRight].Position.Z;
+            floatBody.elbowLeft.coo_z = body.Joints[JointType.ElbowLeft].Position.Z;
+            floatBody.wristLeft.coo_x = body.Joints[JointType.WristLeft].Position.X;
+            floatBody.wristLeft.coo_y = body.Joints[JointType.WristLeft].Position.Y;
+            floatBody.wristLeft.coo_z = body.Joints[JointType.WristLeft].Position.Z;
+            floatBody.wristRight.coo_x = body.Joints[JointType.WristRight].Position.X;
+            floatBody.wristRight.coo_y = body.Joints[JointType.WristRight].Position.Y;
+            floatBody.wristRight.coo_z = body.Joints[JointType.WristRight].Position.Z;
+
+            if (floatBody.wristLeft.coo_z < floatBody.elbowLeft.coo_z && floatBody.wristRight.coo_z < floatBody.elbowRight.coo_z)
+            {
+                if (floatBody.wristLeft.coo_x <= floatBody.shoulderLeft.coo_x)
+                {
+                    if (floatBody.wristRight.coo_x >= floatBody.shoulderRight.coo_x)
+                    {
+                        if (floatBody.wristRight.coo_y >= floatBody.head.coo_y && floatBody.wristLeft.coo_y >= floatBody.head.coo_y)
+                        {
+                            detected = true;
+                        }
+                    }
+                }
+            }
             return detected;
         }
 
