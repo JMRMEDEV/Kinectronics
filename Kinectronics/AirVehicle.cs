@@ -8,26 +8,20 @@ namespace Kinectronics
         {
         }
 
-        protected bool TakeOff()
+        public virtual void TakeOff()
         {
-            // Console.WriteLine("Taking off");
-            return true;
         }
 
-        protected bool Land()
+        public virtual void Land()
         {
-            // Console.WriteLine("Landing...\nLanded");
-            return true;
         }
 
-        protected void IncreaseAltitude()
+        public virtual void IncreaseAltitude()
         {
-
         }
 
-        protected void DecreaseAltitude()
+        public virtual void DecreaseAltitude()
         {
-            // Console.WriteLine("Decreasing Altitude");
         }
     }
 }
