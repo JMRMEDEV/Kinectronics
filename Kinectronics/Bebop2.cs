@@ -83,5 +83,11 @@
             base.DecreaseAltitude();
             bebop.Move(0, 0, 0, 0, -10);
         }
+
+        public override void Pause()
+        {
+            base.Pause();
+            bebop.Move(0, 0, 0, 0, 0);
+        }
     }
 }

@@ -33,6 +33,10 @@
         public virtual void MoveRight()
         {
         }
+
+        public virtual void Pause()
+        {
+        }
     }
 }
 
