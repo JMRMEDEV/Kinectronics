@@ -6,28 +6,32 @@
         {
         }
 
-        protected void TurnRight()
+        public override void TurnRight()
         {
-
+            base.TurnRight();
         }
 
-        protected void TurnLeft()
+        public override void TurnLeft()
         {
-
+            base.TurnLeft();
         }
 
-        protected void MoveBackward()
+        public override void MoveForward()
         {
-
+            base.MoveForward();
         }
 
-        protected void SecurityState()
+        public override void MoveBackward()
         {
-            // Console.WriteLine("Executing security state procedure...");
-            this.SecuritySpeed();
-            this.DecreaseAltitude();
-            this.Land();
-            this.StopConnection();
+            base.MoveBackward();
+        }
+
+        public virtual void MoveLeft()
+        {
+        }
+
+        public virtual void MoveRight()
+        {
         }
     }
 }
