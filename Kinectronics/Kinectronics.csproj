@@ -57,7 +57,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AirVehicle.cs" />
+    <Compile Include="Bebop2.cs" />
     <Compile Include="Device.cs" />
+    <Compile Include="DeviceLibs\Vehicles\AirVehicles\Drones\Parrot\Bebop2\BebopCommand.cs" />
+    <Compile Include="DeviceLibs\Vehicles\AirVehicles\Drones\Parrot\Bebop2\Command.cs" />
+    <Compile Include="DeviceLibs\Vehicles\AirVehicles\Drones\Parrot\Bebop2\CommandSet.cs" />
+    <Compile Include="DeviceLibs\Vehicles\AirVehicles\Drones\Parrot\Bebop2\PCmd.cs" />
     <Compile Include="Drone.cs" />
     <Compile Include="GestureDataBases\KinectronicsDefaultGestureDataBase.cs" />
     <Compile Include="GestureDetector.cs" />
@@ -117,9 +122,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DeviceLibs\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Images\Kinectronics.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
