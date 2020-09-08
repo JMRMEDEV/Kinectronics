@@ -12,6 +12,8 @@ namespace Kinectronics
 
         public MainWindow()
         {
+            // Do not edit this section, unless you know what are you doing
+
             this.InitializeComponent();
             dataWindow = new DataWindow();
             connection = new ConnectionManager(this.statusMessage);
@@ -20,6 +22,8 @@ namespace Kinectronics
 
             this.DataContext = this;
             this.BodyViewbox.DataContext = this.bodyManager.viewer;
+
+            // Write your program's logic from this point:
         }
 
         private void TrackJointData_Click(object sender, RoutedEventArgs e)
