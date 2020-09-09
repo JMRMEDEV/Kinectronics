@@ -23,11 +23,16 @@ Kinectronics is an API (Application Programming Interface) written in C# for sta
 - 64 Bit architecture
 - Visual Studio (any version compatible with .NET framework 4.8)
 - Kinect v2
+- Kinect v2 adapter for PC
 - Kinect v2 official SDK
 
 ## Installation
 
 Just Git Clone this repository in your favourite folder and build the solution with Visual Studio.
+
+## Warning 
+
+As stated in the MIT license, this software is provided with no warranty of any kind. Therefore, me or the contributors are not responsible for any damage to your real hardware, like drones, robots and so. Please, before trying this software in your real hardware, do some tests in the recommended simulations and consult the bug state of the support for your device.
 
 ## Usage
 
