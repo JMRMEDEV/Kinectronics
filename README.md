@@ -4,7 +4,7 @@
 
 Welcome!
 
-**Disclaimer:** this is a work in progress. The software and its documentations is constantly changing. Please keep this in mind. May be missing information. I you strongly consider it necessary, you can make **new issues**. Please, do so only if you find extremely dangerous bugs or vulnerabilities or if you find missing documentation. I'll do my best to fix it as soon as I can. You can also make **pull requests** if you already made important improvements to the project.
+**Disclaimer:** this is a work in progress. The software and its documentations is constantly changing. Please keep this in mind. May be missing information. I you strongly consider it necessary, you can make **new issues**. Please, do so only if you find extremely dangerous bugs or vulnerabilities or if you find missing documentation. I'll do my best to fix it as soon as I can. You can also make **pull requests** if you already made important improvements to the project. For further contact, comments or questions you can join to the [**Official Discord Server**](https://discord.gg/fzERgZa).
 
 **Kinectronics** is an **API** (Application Programming Interface) and an **extensible application** (for graphic joint tracking) written in **C#** for **standard .NET framework**. It is inttended to be an easier and practical way to control (by programming) several devices such as **drones**, **mobile robots**, **robotic arms** and many more through **gesture recognition** by using **Microsoft's Kinect v2**.
 
