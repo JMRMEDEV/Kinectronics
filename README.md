@@ -56,7 +56,7 @@ It is intendded to add a lot of features to the software. In mid-term, I'm plann
 
 ## Special Thanks
 
-I want to scpecially thank to:
+I want to specially thank to:
 
 - [Vangos Pterneas](https://github.com/Vangos) because of its great labor on explaining Kinect, its features and making a great job with this technology through the years. His work was a great inspiration for this project. You can visit his [site](https://pterneas.com/).
 - [Josué Martínez Buenrrostro](https://github.com/josuemb) my beloved father, who in terms of software developing, is a great inspiration and teacher for me.
