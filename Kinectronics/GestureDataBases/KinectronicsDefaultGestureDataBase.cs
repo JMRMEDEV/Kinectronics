@@ -1,5 +1,5 @@
-﻿// 1. Arms45DownPosition (working)
-// 2. Arms45UpPosition (working)
+﻿// 1. Arms45DownPosition (working) --Requires Closed Hand States
+// 2. Arms45UpPosition (working) --Requires Closed Hand States
 // 3. ArmsFrontPosition_L (working)
 // 4. ArmsFrontPosition_R (working)
 // 5. ArmsHRectanglePosition_L (working)
@@ -30,11 +30,11 @@ namespace Kinectronics.GestureDataBases
             {
                 if (body.IsTracked)
                 {
-                    if (Arms45DownPosition(body)) // Gesture 1
+                    if (Arms45DownPosition(body) && body.HandLeftState == HandState.Closed && body.HandRightState == HandState.Closed) // Gesture 1
                     {
                         gesture = "Arms45DownPosition";
                     }
-                    if (Arms45UpPosition(body)) // Gesture 2
+                    if (Arms45UpPosition(body) && body.HandLeftState == HandState.Closed && body.HandRightState == HandState.Closed) // Gesture 2
                     {
                         gesture = "Arms45UpPosition";
                     }
