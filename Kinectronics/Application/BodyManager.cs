@@ -10,16 +10,22 @@ namespace Kinectronics
         private BodyFrameReader bodyFrameReader = null; //Create and initializes a BodyFrameReader object, used to get Body data from the sensor
         private DataTracker tracker = null;
         private DataWindow dataWindow_bm;
-        private TextBlock textBlock_bm;
+        private TextBlock database_bm;
+        private TextBlock gesture_bm;
+        private TextBlock device_bm;
+        private TextBlock command_bm;
         public GestureDetector gestureDetector = null;
         public BodyViewer viewer = null;
 
-        public BodyManager(DataWindow dataWindow, TextBlock textblock)
+        public BodyManager(DataWindow dataWindow, TextBlock database, TextBlock gesture, TextBlock device, TextBlock command)
         {
             dataWindow_bm = dataWindow;
-            textBlock_bm = textblock;
+            database_bm = database;
+            gesture_bm = gesture;
+            device_bm = device;
+            command_bm = command;
         }
-        
+
         public void OpenBodyReader(KinectSensor kinectSensor)
         {
             kinect = kinectSensor;
@@ -27,11 +33,12 @@ namespace Kinectronics
             this.bodyFrameReader.FrameArrived += this.Reader_BodyFrameArrived;
             this.viewer = new BodyViewer(this.kinect);
             this.tracker = new DataTracker(this.kinect, this.dataWindow_bm);
-            this.gestureDetector = new GestureDetector(this.kinect, this.textBlock_bm);
+            this.gestureDetector = new GestureDetector(this.kinect, this.database_bm, this.gesture_bm, this.device_bm, this.command_bm);
         }
 
         public void CloseBodyReader()
         {
+            this.gestureDetector.Dispose();
             if (this.bodyFrameReader != null)
             {
                 // BodyFrameReader is IDisposable

@@ -15,7 +15,7 @@ namespace Kinectronics
             this.InitializeComponent();
             dataWindow = new DataWindow();
             connection = new ConnectionManager(this.statusMessage);
-            bodyManager = new BodyManager(this.dataWindow, this.gesture);
+            bodyManager = new BodyManager(this.dataWindow, this.database, this.gesture, this.device, this.command);
             bodyManager.OpenBodyReader(connection.KinectConnect());
 
             this.DataContext = this;
