@@ -43,6 +43,10 @@ A clear example of this can be found in [**here**](https://github.com/JMRMEDEV/K
 
 **Note:** For a deeper explanation of the features and usage of **Kinectronics**, please, visit the [**wiki**](https://github.com/JMRMEDEV/Kinectronics/wiki).
 
+## Example Apps
+
+Please, take a look to stable applications that already implement Kinectronics in [**here**](https://github.com/JMRMEDEV/KinectronicsApps).
+
 ## Future Releases
 
 It is intendded to add a lot of features to the software. In mid-term, I'm planning to:
