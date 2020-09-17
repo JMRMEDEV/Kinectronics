@@ -1,6 +1,6 @@
 ﻿namespace Kinectronics
 {
-    using DeviceLibs.Vehicles.AirVehicles.Drones.Parrot.Bebop2;
+    using DevicesLibs.Parrot.Bebop2;
     class Bebop2:Drone
     {
         private string _connectionString = null;

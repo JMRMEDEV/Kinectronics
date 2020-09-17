@@ -1,4 +1,4 @@
-﻿namespace Kinectronics.DeviceLibs.Vehicles.AirVehicles.Drones.Parrot.Bebop2
+﻿namespace Kinectronics.DevicesLibs.Parrot.Bebop2
 {
     public struct PCmd
     {
