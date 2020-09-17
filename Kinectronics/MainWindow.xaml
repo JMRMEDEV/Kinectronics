@@ -67,15 +67,24 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Name="RowForKinectStatus"/>
                     <RowDefinition Name="RowForGesture"/>
+                    <RowDefinition Name="RowForDatabase"/>
+                    <RowDefinition Name="RowForDevice"/>
+                    <RowDefinition Name="RowForCommand"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Name="TitleCol" Width="250"/>
+                    <ColumnDefinition Name="TitleCol" Width="280"/>
                     <ColumnDefinition Name="DataCol"/>
                 </Grid.ColumnDefinitions>
                 <TextBlock FontSize="30" Grid.Row="0" Grid.Column="0" Margin="15, 10, 0, 0" Foreground="DodgerBlue">Kinnect Status:</TextBlock>
                 <TextBlock FontSize="30" Grid.Row="0" Grid.Column="1" Margin="15, 10, 0, 0" Foreground="LimeGreen" Name="statusMessage" Text=""/>
-                <TextBlock FontSize="30" Grid.Row="10" Grid.Column="0" Margin="15, 10, 0, 0" Foreground="DodgerBlue">Gesture Detected:</TextBlock>
-                <TextBlock FontSize="30" Grid.Row="10" Grid.Column="1" Margin="15, 10, 0, 0" Foreground="LimeGreen" Name="gesture" Text=""/>
+                <TextBlock FontSize="30" Grid.Row="1" Grid.Column="0" Margin="15, 10, 0, 0" Foreground="DodgerBlue">Gesture Database:</TextBlock>
+                <TextBlock FontSize="30" Grid.Row="1" Grid.Column="1" Margin="15, 10, 0, 0" Foreground="LimeGreen" Name="database" Text=""/>
+                <TextBlock FontSize="30" Grid.Row="2" Grid.Column="0" Margin="15, 10, 0, 0" Foreground="DodgerBlue">Gesture Detected:</TextBlock>
+                <TextBlock FontSize="30" Grid.Row="2" Grid.Column="1" Margin="15, 10, 0, 0" Foreground="LimeGreen" Name="gesture" Text=""/>
+                <TextBlock FontSize="30" Grid.Row="3" Grid.Column="0" Margin="15, 10, 0, 0" Foreground="DodgerBlue">Device:</TextBlock>
+                <TextBlock FontSize="30" Grid.Row="3" Grid.Column="1" Margin="15, 10, 0, 0" Foreground="LimeGreen" Name="device" Text=""/>
+                <TextBlock FontSize="30" Grid.Row="4" Grid.Column="0" Margin="15, 10, 0, 0" Foreground="DodgerBlue">Command:</TextBlock>
+                <TextBlock FontSize="30" Grid.Row="4" Grid.Column="1" Margin="15, 10, 0, 0" Foreground="LimeGreen" Name="command" Text=""/>
             </Grid>
         </StackPanel>
     </Grid>
