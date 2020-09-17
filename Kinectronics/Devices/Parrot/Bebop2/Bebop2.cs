@@ -19,8 +19,7 @@
             }
             if (bebop.Discover() == false)
             {
-                // Console.WriteLine("Discover failed!");
-                return;
+                throw new System.NotImplementedException();
             }
         }
 
