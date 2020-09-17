@@ -56,20 +56,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AirVehicle.cs" />
-    <Compile Include="Bebop2.cs" />
-    <Compile Include="Device.cs" />
-    <Compile Include="DeviceLibs\Vehicles\AirVehicles\Drones\Parrot\Bebop2\BebopCommand.cs" />
-    <Compile Include="DeviceLibs\Vehicles\AirVehicles\Drones\Parrot\Bebop2\Command.cs" />
-    <Compile Include="DeviceLibs\Vehicles\AirVehicles\Drones\Parrot\Bebop2\CommandSet.cs" />
-    <Compile Include="DeviceLibs\Vehicles\AirVehicles\Drones\Parrot\Bebop2\PCmd.cs" />
-    <Compile Include="Drone.cs" />
+    <Compile Include="Devices\Kinectronics\AirVehicle.cs" />
+    <Compile Include="Devices\Parrot\Bebop2\Bebop2.cs" />
+    <Compile Include="Devices\Kinectronics\Device.cs" />
+    <Compile Include="DevicesLibs\Parrot\Bebop2\BebopCommand.cs" />
+    <Compile Include="DevicesLibs\Parrot\Bebop2\Command.cs" />
+    <Compile Include="DevicesLibs\Parrot\Bebop2\CommandSet.cs" />
+    <Compile Include="DevicesLibs\Parrot\Bebop2\PCmd.cs" />
+    <Compile Include="Devices\Kinectronics\Drone.cs" />
     <Compile Include="GestureDataBases\KinectronicsDefaultGestureDataBase.cs" />
-    <Compile Include="GestureDetector.cs" />
-    <Compile Include="GroundVehicle.cs" />
-    <Compile Include="Vehicle.cs" />
-    <Compile Include="VisualDataTracker.cs" />
-    <Page Include="DataWindow.xaml">
+    <Compile Include="Application\GestureDetector.cs" />
+    <Compile Include="Devices\Kinectronics\GroundVehicle.cs" />
+    <Compile Include="Devices\Kinectronics\Vehicle.cs" />
+    <Compile Include="Application\VisualDataTracker.cs" />
+    <Page Include="Application\DataWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -81,16 +81,16 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BodyManager.cs" />
-    <Compile Include="BodyViewer.cs" />
-    <Compile Include="ConnectionManager.cs" />
-    <Compile Include="DataTracker.cs" />
-    <Compile Include="DataWindow.xaml.cs">
+    <Compile Include="Application\BodyManager.cs" />
+    <Compile Include="Application\BodyViewer.cs" />
+    <Compile Include="Application\ConnectionManager.cs" />
+    <Compile Include="Application\DataTracker.cs" />
+    <Compile Include="Application\DataWindow.xaml.cs">
       <DependentUpon>DataWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FloatBody.cs" />
-    <Compile Include="KinectEvent.cs" />
-    <Compile Include="KinectEventArgs.cs" />
+    <Compile Include="Application\FloatBody.cs" />
+    <Compile Include="Application\KinectEvent.cs" />
+    <Compile Include="Application\KinectEventArgs.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -122,7 +122,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DevicesLibs\LEGO\Mindstorms\" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Kinectronics.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

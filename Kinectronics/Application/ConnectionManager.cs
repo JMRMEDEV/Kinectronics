@@ -1,5 +1,4 @@
 ﻿using Microsoft.Kinect;
-using System.ComponentModel;
 using System.Windows.Controls;
 
 namespace Kinectronics
