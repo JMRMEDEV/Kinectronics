@@ -4,7 +4,7 @@
 
 Welcome!
 
-**Disclaimer:** this is a work in progress. The software and its documentations is constantly changing. Please keep this in mind. May be missing information. If you strongly consider it necessary, you can make **new issues**. Please, do so only if you find extremely dangerous bugs or vulnerabilities or if you find missing documentation. I'll do my best to fix it as soon as I can. You can also make **pull requests** if you already made important improvements to the project. For further contact, comments or questions you can join to the [**Official Discord Server**](https://discord.gg/fzERgZa).
+**Disclaimer:** this is a work in progress, the software, and its documentation are constantly changing. Please keep this in mind while using it, some information could be incomplete. If you strongly consider it necessary, you can make **new issues**. Please, do so only if you find extremely dangerous bugs or vulnerabilities or if you find missing documentation. I'll do my best to fix it as soon as I can. You can also make **pull requests** if you already made important improvements to the project. For further contact, comments or questions you can join to the [**Official Discord Server**](https://discord.gg/fzERgZa).
 
 **Kinectronics** is an **API** (Application Programming Interface) and an **extensible application** (for graphic joint tracking) written in **C#** for **standard .NET framework**. It is inttended to be an easier and practical way to control (by programming) several devices such as **drones**, **mobile robots**, **robotic arms** and many more through **gesture recognition** by using **Microsoft's Kinect v2**.
 
@@ -18,6 +18,7 @@ Welcome!
 - Support for official and popular mechatronic and robotic devices
 - Modular programming
 - Good performance
+- Basic support for [**Webots Robot Simulator**](https://www.cyberbotics.com/) (currently through TCP socket).
 
 ## Requirements
 
@@ -56,7 +57,6 @@ It is intendded to add a lot of features to the software. In mid-term, I'm plann
 - Release C++ version of the software
 - Release a Linux compatible version of the software
 - Add support for ROS
-- Add support for Webots
 
 ## Special Thanks
 
@@ -69,9 +69,12 @@ I want to specially thank to:
 
 **User Interface**
 
-A clear joint tracking is seen.
+A clear joint tracking and robot controlling is seen:
 
-![GUI](https://github.com/JMRMEDEV/Kinectronics/blob/master/RepositoryMedia/Yf9WsgCtdw.png)
+![UR5App](https://github.com/JMRMEDEV/Kinectronics/blob/master/RepositoryMedia/ur5app.png)
+
+Another example of the GUI with implemented app:
+![EV3App](https://github.com/JMRMEDEV/Kinectronics/blob/master/RepositoryMedia/ev3app.png)
 
 **Data tracker**
 
