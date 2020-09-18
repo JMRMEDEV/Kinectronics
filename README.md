@@ -40,7 +40,7 @@ As stated in the MIT license, this software is provided with no warranty of any 
 ## Usage
 
 Just create a new **device** object in **GestureDetector** Class, make reference to an existing **Gesture Data Base** and define your own controller method in **GestureDetector**. 
-A clear example of this can be found in [**here**](https://github.com/JMRMEDEV/KinectronicsApps/blob/master/Bebop2Controller/Kinectronics/Kinectronics/GestureDetector.cs).
+A clear example of this can be found in [**here**](https://github.com/JMRMEDEV/KinectronicsApps/blob/master/Bebop2Controller/Kinectronics/Kinectronics/Application/GestureDetector.cs).
 
 **Note:** For a deeper explanation of the features and usage of **Kinectronics**, please, visit the [**wiki**](https://github.com/JMRMEDEV/Kinectronics/wiki).
 
