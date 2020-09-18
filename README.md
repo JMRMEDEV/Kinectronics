@@ -48,6 +48,10 @@ A clear example of this can be found in [**here**](https://github.com/JMRMEDEV/K
 
 Please, take a look to stable applications that already implement Kinectronics in [**here**](https://github.com/JMRMEDEV/KinectronicsApps).
 
+## Supported devices
+
+Please, take a look to the current officially Kinectronics' supported devices in [**here**](https://github.com/JMRMEDEV/Kinectronics/wiki/Supported-Devices).
+
 ## Future Releases
 
 It is intendded to add a lot of features to the software. In mid-term, I'm planning to:
