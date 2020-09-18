@@ -63,6 +63,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Devices\Kinectronics\AirVehicle.cs" />
+    <Compile Include="Devices\Kinectronics\Arm.cs" />
+    <Compile Include="Devices\LEGO\Mindstorms\EV3ArmV1.cs" />
     <Compile Include="Devices\LEGO\Mindstorms\EV3MobileRobot.cs" />
     <Compile Include="Devices\Parrot\Bebop2\Bebop2.cs" />
     <Compile Include="Devices\Kinectronics\Device.cs" />
@@ -71,6 +73,7 @@
     <Compile Include="DevicesLibs\Parrot\Bebop2\CommandSet.cs" />
     <Compile Include="DevicesLibs\Parrot\Bebop2\PCmd.cs" />
     <Compile Include="Devices\Kinectronics\Drone.cs" />
+    <Compile Include="Devices\UniversalRobots\Webots\URe\TCPUR5.cs" />
     <Compile Include="GestureDataBases\KinectronicsDefaultGestureDataBase.cs" />
     <Compile Include="Application\GestureDetector.cs" />
     <Compile Include="Devices\Kinectronics\GroundVehicle.cs" />
