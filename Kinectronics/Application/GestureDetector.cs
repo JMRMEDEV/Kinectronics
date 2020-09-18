@@ -4,6 +4,8 @@
     using System;
     using Kinectronics.GestureDataBases;
     using System.Windows.Controls;
+    // Here should be a reference to the desired device E.G.
+    // namespace Kinectronics.Devices.LEGO.Mindstorms
 
     public class GestureDetector
     {
