@@ -3,7 +3,7 @@
     using System;
     using System.Net.Sockets;
     using Kinectronics;
-    class TCPUR5 : Arm 
+    class TCPUR5 : Arm
     {
         // Create a TcpClient
         private Int32 port = 27015;
@@ -14,8 +14,13 @@
         //  Stream stream = client.GetStream();
         static NetworkStream stream;
 
-        public TCPUR5(string connectionString) : base(connectionString) 
+        public TCPUR5(string connectionString) : base(connectionString)
         {
+        }
+
+        public override void StablishConnection()
+        {
+            base.StablishConnection();
             client = new TcpClient("localhost", port);
         }
 
@@ -46,25 +51,25 @@
             Console.WriteLine("Received: {0}", responseData);
         }
 
-        private void moveRight()
+        public void moveRight()
         {
             // Side Position
             SendMessage("aSP");
         }
 
-        private void moveFront()
+        public void moveFront()
         {
             // Front Position
             SendMessage("aFP");
         }
 
-        private void moveDown()
+        public void moveDown()
         {
             // Default Position
             SendMessage("aDP");
         }
 
-        private void moveHRPosition()
+        public void moveHRPosition()
         {
             // HRectangle Position
             SendMessage("aHRP");
