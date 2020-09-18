@@ -30,28 +30,28 @@
 
         public override void TurnRight()
         {
-            Console.WriteLine("Turn Right");
+            base.TurnRight();
             ev3.MotorB.On(turnspeed);
             ev3.MotorC.Off();
         }
 
         public override void TurnLeft()
         {
-            Console.WriteLine("Turn Left");
+            base.TurnLeft();
             ev3.MotorC.On(turnspeed);
             ev3.MotorB.Off();
         }
 
         public override void MoveForward()
         {
-            Console.WriteLine("Forward");
+            base.MoveForward();
             ev3.MotorC.On(movespeed);
             ev3.MotorB.On(movespeed);
         }
 
         public override void MoveBackward()
         {
-            Console.WriteLine("Backward");
+            base.MoveBackward();
             movespeed = -40;
             ev3.MotorC.On(movespeed);
             ev3.MotorB.On(movespeed);
@@ -59,12 +59,14 @@
 
         public override void Stop()
         {
+            base.Stop();
             ev3.MotorB.Brake();
             ev3.MotorC.Brake();
         }
 
         public override void StopConnection()
         {
+            base.StopConnection();
             ev3.Connection.Close();
         }
     }
